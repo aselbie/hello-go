@@ -51,7 +51,7 @@ func sayHiHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Reject request if required fields are missing
 	if len(missingFields) > 0 {
-		http.Error(w, "The following fields were missing from your request: " + strings.Join(missingFields[:],", "), http.StatusBadRequest)
+		http.Error(w, "The following fields were missing from your request: "+strings.Join(missingFields[:], ", "), http.StatusBadRequest)
 		return
 	}
 
